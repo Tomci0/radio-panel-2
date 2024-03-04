@@ -1,0 +1,22 @@
+{
+    "name": "ZS14 - Radio",
+    "short_name": "ZS14 - Radio",
+    "description": "Aplikacja mobilna ZS14 - Radio",
+    "icons": [
+      {
+        "src": "/../images/zs14-logo.png",
+        "sizes": "225x225",
+        "type": "image/png",
+        "purpose": "maskable"
+      },
+      {
+        "src": "/../images/zs14-512.png",
+        "sizes": "512x512",
+        "type": "image/png"
+      }
+    ],
+    "start_url": "/",
+    "display": "fullscreen",
+    "theme_color": "#019232",
+    "background_color": "#6ea17a"
+  }
