@@ -94,12 +94,26 @@
         <div class="d-flex justify-content-center">
             <img src="/images/zs14-logo.png" width="32" height="32" class="rounded-circle">
         </div>
+
         <div class="d-flex justify-content-end">
             <button id="theme-toggle" type="button" class="btn btn-sm me-2">
                 <span class="iconify" data-icon="mdi:weather-night" id="theme-icon"></span>
             </button>
-            <img src="<%= userdata.picture %>" width="32" height="32" class="rounded-circle">
+
+            <% if (userdata.isLogged) { %>
+                <img src="<%= userdata.picture %>" width="32" height="32" class="rounded-circle">
+            <% } else { %> 
+                <a href="/auth/google">
+                    <button href="/auth/google" id="login-btn" type="button" class="btn btn-outline-danger me-2">
+                        <span class="icon">
+                            <span class="iconify" data-icon="mdi:google-plus"></span>
+                        </span>
+                    </button>
+                </a>
+            <% } %>
+
         </div>
+
         <div class="collapse navbar-collapse" id="navbarToggleExternalContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0 text-center">
                 <li><hr class="divider"></li>
