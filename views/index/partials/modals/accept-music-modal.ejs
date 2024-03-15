@@ -1,0 +1,51 @@
+<div class="modal fade" id="accept-music-modal" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered modal-md">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalToggleLabel">Czy napewno chcesz wysłać tą piosenkę do
+                    weryfikacji?</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="container-fluid">
+                    <div class="row d-flex justify-content-center align-items-center text-center">
+                        <div class="col-12 col-md-7">
+                            <img id="thumbnail" class="song-img rounded" style="max-width: 100%;" src="https://i.ytimg.com/vi/qmOOKxjQXgI/sddefault.jpg?sqp=-oaymwEWCJADEOEBIAQqCghqEJQEGHgg6AJIWg&rs=AMzJL3lna41Y0Z4cfxgTs7MbUgyE5RoHnw" alt="...">
+                        </div>
+                        <div class="col-12 col-md-5 mt-2 text-left">
+                            <span id="title" class="fw-bold">PETITO</span>
+                        </div>
+                        <div class="col-12 mt-5">
+                            <div class="row">
+                                <div class="col-12">
+                                    <span id="length">
+                                        <span id="current-time">0:00</span> /
+                                        <span id="duration">12:00</span>
+                                    </span>
+                                </div>
+                                <div class="col-12">
+                                    <div class="progress" role="progressbar" aria-label="Danger example"
+                                        aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                                        <div id="duration-bar" class="duration-music progress-bar bg-danger" style="width: 100%">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <span id="play-btn">
+                                        <span class="iconify" data-icon="material-symbols:play-circle"></span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button id="send-request-btn" class="btn btn-success">Wyślij do weryfikacji</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="player" style="display: none; visibility: hidden;"></div>

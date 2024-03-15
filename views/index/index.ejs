@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <%- include('./partials/head.ejs') %>
+
+    <script>
+        const playerUrl = "<%= playerUrl %>";
+    </script>
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+
+    <!-- NAVBAR -->
+
+    <%- include('./partials/navbar.ejs', {userdata}) %>
+
+    <!-- PAGE CONTENT -->
+
+    <div id="main-info" class="container-fluid d-flex mx-auto flex-column w-75">
+        <div class="row align-items-center">
+            <div class="col-12 col-md-5">
+                <img src="/images/logo.webp">
+            </div>
+            <div class="col-12 col-md-7 mt-5">
+                <main class="px-3">
+                    <h2>Radiowęzeł - ZS14</h2>
+                    <p class="lead" style="width: 65ch;">Na naszej stronie możesz dodać swoje ulubione piosenki do kolejki odtwarzania. Podziel się
+                        swoją muzyką i spraw, aby każdy dzień w szkole był dźwiękowym doznaniem!</p>
+                </main>  
+            </div>
+        </div>
+    </div>
+
+    <!-- MODALS -->
+
+    <!-- FOOTER -->
+
+    <%- include('./partials/footer.ejs') %>
+
+    <!-- SCRIPTS -->
+
+    <%- include('./partials/scripts.ejs') %>
+</body>
+
+</html>

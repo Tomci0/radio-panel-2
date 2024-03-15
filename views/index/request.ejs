@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <%- include('./partials/head.ejs') %>
+
+    <script>
+        const playerUrl = "<%= playerUrl %>";
+    </script>
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+
+    <!-- NAVBAR -->
+
+    <%- include('./partials/navbar.ejs', {userdata}) %>
+
+    <!-- PAGE CONTENT -->
+
+    <div id="page-content" class="container">
+        <div class="row mt-4">
+            <div class="col d-flex justify-content-center">
+                <div class="row">
+                    <h2>Dodaj Piosenkę</h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-2">
+            <div class="col d-flex justify-content-center align-items-center text-center">
+                <div class="form-group w-80">
+                    <div class="input-group">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col">
+                                    <label>Wprowadź tytuł lub link do piosenki:</label>
+                                </div>
+                            </div>
+                            <div class="row justify-content-center align-items-center text-center">
+                                <div class="col-12 mb-2">
+                                    <input id="music-query-inp" type="text" class="form-control text-center">
+                                </div>
+                                <div class="col-12">
+                                    <button id="find-query-btn" class="btn btn-outline-secondary px-4"
+                                        type="submit">Wyszukaj Piosenkę</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <small id="passwordHelpBlock" class="form-text text-muted mt-2 d-block">
+                        <span class="d-block">Aktualnie obsługiwane portale: YouTube</span>
+                        <span class="d-block">Można wysłać jedną piosenkę na 5 minut.</span>
+                    </small>
+                </div>
+            </div>
+        </div>
+
+        <div id="results" style="display: none;">
+            <div class="row mt-5">
+                <div class="col text-center">
+                    <h3>Wyniki wyszukiwania</h3>
+                </div>
+            </div>
+
+            <!-- WAITING FOR RESULTS -->
+
+            <div id="spinner" class="d-flex justify-content-center mt-5">
+                <div class="spinner-border" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+            </div>
+
+            <!-- RESULTS -->
+
+            <div id="request-results" class="row mt-3" style="display: none !important;">
+                <div class="col d-flex justify-content-center">
+                    <ul id="request-results-list" class="list-group w-80">
+
+                        <!-- REQUEST RESULTS -->
+                        
+                        <li class="list-group-item d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#accept-music-modal">
+                            <div class="thumbnail">
+                                <img src="https://i.ytimg.com/vi/qmOOKxjQXgI/sddefault.jpg?sqp=-oaymwEWCJADEOEBIAQqCghqEJQEGHgg6AJIWg&rs=AMzJL3lna41Y0Z4cfxgTs7MbUgyE5RoHnw" style="height: 6vh; width: auto;" alt="Thumbnail" class="img-thumbnail">
+                            </div>
+                            <div class="song-info text-center d-flex justify-content-center align-items-center flex-grow-1 mt-2">
+                                <div class="name fs-09">
+                                    <span class="author fw-semibold">PETITO</span> - <span class="name">MEFEDRON</span>
+                                </div>
+                            </div>
+                        </li>
+        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODALS -->
+
+    <%- include('./partials/modals/accept-music-modal.ejs') %>
+
+    <!-- FOOTER -->
+
+    <%- include('./partials/footer.ejs') %>
+
+    <!-- SCRIPTS -->
+
+    <%- include('./partials/scripts.ejs') %>
+
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script src="/index/js/request.js"></script>
+    <script src="/js/notify.js"></script>
+</body>
+
+</html>

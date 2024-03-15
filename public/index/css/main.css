@@ -181,8 +181,15 @@ footer {
 
     #page-content {
         position: absolute;
-        top: 5%;
+        top: 3em;
     }
+}
+
+#pagination {
+    position: absolute;
+    bottom: 5em;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 /* QUEUE */
@@ -192,9 +199,17 @@ footer {
     font-weight: 600;
 }
 
-#page-content #queue-list {
+#page-content .list-group {
     overflow: auto;
-    max-height: 65vh;
+    max-height: 46.3vh;
+    background-color: #ebebeb;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+#page-content .list-group-item {
+    background-color: #ebebeb;
+    transition: 0.2s;
 }
 
 #page-content #queue-list .list-group-item .thumbnail img {
@@ -207,6 +222,98 @@ footer {
     background-color: #00000000;
 }
 
+@media screen and (max-width: 576px) {
+    #page-content .list-group {
+        max-height: 31vh;
+    }
+}
+
+#page-content #request-results-list {
+    overflow: auto;
+    max-height: 46.5vh;
+}
+
+#page-content #request-results-list .list-group-item {
+    /* background-color: #ebebeb; */
+    transition: 0.2s;
+}
+
+#page-content #request-results-list .list-group-item:hover {
+    background-color: rgba(25, 25, 25, 0.1) !important;
+}
+
+#find-music-btn {
+    background-color: #191919;
+    color: rgba(255, 255, 255, 0.87);;
+    transition: 0.2s;
+}
+
+#find-music-input {
+    text-align: center;
+}
+
+#find-music-btn:hover {
+    background-color: #019232;
+    color: rgba(255, 255, 255, 0.87);
+}
+
+/* #spinner {
+    position: relative;
+    left: 50%;
+    transform: translateY(-50%);
+
+} */
+
+
+#page-content #request-results-list .list-group-item .thumbnail img {
+    border: 0;
+    height: 6vh;
+    width: auto;
+    border-radius: 10px;
+    transition: 0.2s;
+    box-shadow: 2px 2px 3px 2px #0000005e;
+    background-color: #00000000;
+}
+
+/* PLAYER YOUTUVE */
+
+#accept-music-modal #play-btn {
+    color: #232323;
+    font-size: 2.5em;
+    transition: 0.2s;
+}
+
+#accept-music-modal #play-btn:hover {
+    color: #019232 !important;
+    font-size: 2.5em;
+    cursor: pointer;
+}
+
+#accept-music-modal .progress-bar {
+    transition-property: width !important;
+    transition-duration: 1s !important;
+    transition-timing-function: linear !important;
+}
+
+#accept-music-modal .progress {
+    height: 0.5em !important;
+}
+
+#accept-music-modal .progress .duration-music {
+    background-color: #019232 !important;
+}
+
+.w-80 {
+    width: 80% !important;
+}
+
+/* REQUEST MUSIC MODAL */
+
+#accept-music-modal #send-song-btn {
+    background-color: #019232;
+}
+
+
 /* #page-content #queue-list .list-group-item .song-info {
     height: 5.5vh;
 } */
@@ -217,78 +324,6 @@ footer {
 
 .fs-09 {
     font-size: 0.9em !important;
-}
-
-/* DARK THEME */
-
-
-[data-bs-theme=dark] body {
-    --bs-body-bg: #191919;
-    --bs-border-color-translucent: rgba(25, 25, 25, 0.6);
-    background-color: var(--bs-body-bg);
-    color: rgba(255, 255, 255, 0.87);
-}
-
-[data-bs-theme=dark] footer {
-    color: rgba(255, 255, 255, 0.87) !important;
-}
-
-[data-bs-theme=dark] .border-top {
-    border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
-}
-
-[data-bs-theme=dark] header {
-    background-color: #232323;
-}
-
-[data-bs-theme=dark] #navbar .nav-link:not(.active) {
-    color: rgba(255, 255, 255, 0.87);
-}
-
-[data-bs-theme="dark"] .dropdown-toggle {
-    color: rgba(255, 255, 255, 0.87) !important;
-}
-
-[data-bs-theme="dark"] #theme-toggle {
-    color: rgba(255, 255, 255, 0.87);
-}
-
-/* DROPDOWN */
-
-[data-bs-theme="dark"] .dropdown-menu {
-    background-color: #232323;
-    color: rgba(255, 255, 255, 0.87);
-    border: 0;
-    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
-}
-
-[data-bs-theme="dark"] .dropdown-divider {
-    color: rgba(255, 255, 255, 0.87);
-    background-color: #232323;
-}
-
-[data-bs-theme=dark] .dropdown-item:hover {
-    background-color: #019232;
-    color: rgba(255, 255, 255, 0.87);
-}
-
-/* DARK THEME NAVBAR MOBILE */
-
-[data-bs-theme=dark] .navbar {
-    background-color: #232323;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-    border-radius: 0 0 15px 15px;
-    margin: 0 15px 0 15px;
-}
-
-[data-bs-theme=dark] .navbar .navbar-toggler {
-    color: #fff;
-    border: 0;
-    font-size: 2em;
-}
-
-[data-bs-theme=dark] .navbar .navbar-collapse .nav-item .nav-link:not(.active) {
-    color: #fff !important;
 }
 
 

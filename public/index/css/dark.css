@@ -1,0 +1,84 @@
+[data-bs-theme=dark] body {
+    --bs-body-bg: #191919;
+    --bs-border-color-translucent: rgba(25, 25, 25, 0.6);
+    background-color: var(--bs-body-bg);
+    color: rgba(255, 255, 255, 0.87);
+}
+
+[data-bs-theme=dark] footer {
+    color: rgba(255, 255, 255, 0.87) !important;
+}
+
+[data-bs-theme=dark] .border-top {
+    border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+[data-bs-theme=dark] header {
+    background-color: #232323;
+}
+
+[data-bs-theme=dark] #navbar .nav-link:not(.active) {
+    color: rgba(255, 255, 255, 0.87);
+}
+
+[data-bs-theme="dark"] .dropdown-toggle {
+    color: rgba(255, 255, 255, 0.87) !important;
+}
+
+[data-bs-theme="dark"] #theme-toggle {
+    color: rgba(255, 255, 255, 0.87);
+}
+
+/* DROPDOWN */
+
+[data-bs-theme="dark"] .dropdown-menu {
+    background-color: #232323;
+    color: rgba(255, 255, 255, 0.87);
+    border: 0;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+[data-bs-theme="dark"] .dropdown-divider {
+    color: rgba(255, 255, 255, 0.87);
+    background-color: #232323;
+}
+
+[data-bs-theme=dark] .dropdown-item:hover {
+    background-color: #019232;
+    color: rgba(255, 255, 255, 0.87);
+}
+
+/* DARK THEME NAVBAR MOBILE */
+
+[data-bs-theme=dark] .navbar {
+    background-color: #232323;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    border-radius: 0 0 15px 15px;
+    margin: 0 15px 0 15px;
+}
+
+[data-bs-theme=dark] .navbar .navbar-toggler {
+    color: #fff;
+    border: 0;
+    font-size: 2em;
+}
+
+[data-bs-theme=dark] .navbar .navbar-collapse .nav-item .nav-link:not(.active) {
+    color: #fff !important;
+}
+
+[data-bs-theme=dark] #accept-music-modal #play-btn {
+    color: rgba(255, 255, 255, 0.87);
+}
+
+[data-bs-theme=dark] #page-content .list-group {
+    background-color: #232323 !important;
+}
+
+[data-bs-theme=dark] #page-content .list-group-item {
+    background-color: #232323 !important;
+}
+
+[data-bs-theme=dark] #page-content #request-results-list .list-group-item:hover {
+    background-color: rgba(25, 25, 25, 0.3) !important;
+}

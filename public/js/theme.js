@@ -1,7 +1,6 @@
 (() => {
     'use strict'
   
-    document.addEventListener('DOMContentLoaded', () => {
       const getStoredTheme = () => localStorage.getItem('theme');
       const setStoredTheme = theme => localStorage.setItem('theme', theme);
   
@@ -39,20 +38,20 @@
       };
   
       // each document query selector
+      document.addEventListener('DOMContentLoaded', () => {
+        Array.from(document.querySelectorAll("#theme-toggle")).forEach(button=> {
+          button.addEventListener('click', () => {
+            updateTheme();
+          });
+        })
   
-      Array.from(document.querySelectorAll("#theme-toggle")).forEach(button=> {
-        button.addEventListener('click', () => {
-          updateTheme();
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
+          const storedTheme = getStoredTheme();
+          if (!storedTheme) {
+            showActiveTheme();
+          }
         });
-      })
-  
-      window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
-        const storedTheme = getStoredTheme();
-        if (!storedTheme) {
-          showActiveTheme();
-        }
       });
   
       showActiveTheme(); // Ustawienie trybu po załadowaniu strony
-    });
   })()

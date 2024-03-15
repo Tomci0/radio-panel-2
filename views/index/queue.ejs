@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <%- include('./partials/head.ejs') %>
+
+    <script>
+        const playerUrl = "<%= playerUrl %>";
+    </script>
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+
+    <!-- NAVBAR -->
+
+    <%- include('./partials/navbar.ejs', {userdata}) %>
+
+    <!-- PAGE CONTENT -->
+
+    <div id="page-content" class="container">
+        <div class="row ml-2 text-center mt-4">
+            <div class="col">
+                <span class="title">Kolejka Piosenek</span>
+            </div>
+        </div>
+        <div class="row mt-2 mb-5 justify-content-center">
+            <div class="col">
+
+                <!-- JESLI NIE JEST DOSTEPNA -->
+
+                <div id="queue-error" class="alert alert-warning mt-3" role="alert" style="width: 50%; left: 50%; transform: translateX(-50%); display: none;">
+                    Kolejka jest obecnie niedostępna. Spróbuj ponownie później.
+                </div>
+
+                <div id="queue-empty" class="alert alert-warning mt-3" role="alert" style="width: 50%; left: 50%; transform: translateX(-50%); display: none;">
+                    Kolejka jest obecnie pusta.
+                </div>
+
+                <!-- JESLI SIE WCZYTUJE -->
+
+                <div id="spinner" class="d-flex justify-content-center mt-5">
+                    <div class="spinner-border" role="status">
+                      <span class="visually-hidden">Loading...</span>
+                    </div>
+                </div>
+
+                <!-- JESLI KOLEJKA ISTNIEJE -->
+                <ul id="queue-list" class="list-group queue-show" style="display: none;">
+
+
+                    <!-- QUEUE ITEMS -->
+
+                    <!-- <li class="list-group-item d-flex align-items-center">
+                        <div class="thumbnail">
+                            <img src="https://i.ytimg.com/vi/qmOOKxjQXgI/sddefault.jpg?sqp=-oaymwEWCJADEOEBIAQqCghqEJQEGHgg6AJIWg&rs=AMzJL3lna41Y0Z4cfxgTs7MbUgyE5RoHnw" style="height: 6vh; width: auto;" alt="Thumbnail" class="img-thumbnail">
+                        </div>
+                        <div class="song-info text-center d-flex justify-content-center align-items-center flex-grow-1 mt-2">
+                            <div class="name fs-09">
+                                <span class="author fw-semibold">PETITO</span> - <span class="name">MEFEDRON</span>
+                            </div>
+                        </div>
+                    </li> -->
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <nav class="queue-show" aria-label="Page navigation example" id="pagination" style="display: none;">
+        <ul class="pagination justify-content-center">
+            <li class="page-item">
+                <a class="page-link" href="#" aria-label="Previous">
+                    <span aria-hidden="true">&laquo;</span>
+                </a>
+            </li>
+            <li class="page-item"><a class="page-link active" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item">
+                <a class="page-link" href="#" aria-label="Next">
+                <span aria-hidden="true">&raquo;</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    
+
+    <!-- MODALS -->
+
+    <!-- FOOTER -->
+
+    <%- include('./partials/footer.ejs') %>
+
+    <!-- SCRIPTS -->
+
+    <%- include('./partials/scripts.ejs') %>
+
+    <script src="/index/js/queue.js"></script>
+</body>
+
+</html>
