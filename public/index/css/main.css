@@ -201,7 +201,7 @@ footer {
 
 #page-content .list-group {
     overflow: auto;
-    max-height: 46.3vh;
+    max-height: 48rem;
     background-color: #ebebeb;
     border-radius: 5px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
@@ -224,7 +224,7 @@ footer {
 
 @media screen and (max-width: 576px) {
     #page-content .list-group {
-        max-height: 31vh;
+        max-height: 43.6rem;
     }
 }
 
