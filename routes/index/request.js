@@ -1,4 +1,4 @@
-import express from "express";
+import express, { query } from "express";
 const router = express.Router();
 
 import * as yt from 'youtube-search-scrapper';
@@ -19,8 +19,8 @@ router.get('/search', async function(req, res, next) {
         res.status(400).json({ message: 'query is required' });
         return;
     }
-    const search = await yt.search(req.query.q);
-    res.json({ message: 'searching for ' + req.query.q, data: search });
+    const search = await yt.search(req.query.q.split('?si')[0]);
+    res.json({ message: 'searching for ' + req.query.q.split('?si')[0], data: search });
 });
 
 router.post('/send', async function(req, res, next) {
