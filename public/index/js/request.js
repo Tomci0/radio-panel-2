@@ -116,10 +116,7 @@ $(() => {
             url: '/request/send',
             method: 'POST',
             data: { 
-                songId,
-                title: $('#accept-music-modal .modal-body #title').text(),
-                thumbnail: $('#accept-music-modal .modal-body #thumbnail').attr('src'),
-                duration: Number(duration.split(':')[0]*60) + Number(duration.split(':')[1])
+                songId
             },
             withCredentials: true,
             success: async (data) => {

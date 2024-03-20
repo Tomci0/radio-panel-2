@@ -20,6 +20,7 @@ router.get('/search', async function(req, res, next) {
         return;
     }
     const search = await yt.search(req.query.q.split('?si')[0]);
+    req.session.cachedSounds = search;
     res.json({ message: 'searching for ' + req.query.q.split('?si')[0], data: search });
 });
 
@@ -29,14 +30,21 @@ router.post('/send', async function(req, res, next) {
         return;
     }
 
-    if (!req.body.songId || !req.body.title || !req.body.thumbnail || !req.body.duration) return res.status(400).json({ message: 'songId is required' });
+    if (!req.body.songId) return res.status(400).json({ message: 'songId is required' });
 
-    console.log(req.session.nextRequest, Date.now(), req.session.nextRequest > Date.now())
     if (req.session.nextRequest > Date.now()) {
         res.status(429).json({ message: 'too many requests', code: 'too_many_requests' });
         return;
     }
+    
+    if (!req.session.cachedSounds) return res.status(400).json({ message: 'search for song first' });
 
+    const songData = req.session.cachedSounds.find(s => s.id.videoId === req.body.songId);
+
+    if (!songData) {
+        res.status(400).json({ message: 'song not found' });
+        return;
+    }
     // send request 
 
     let findSong = await Song.findOne({ songId: req.body.songId });
@@ -45,9 +53,9 @@ router.post('/send', async function(req, res, next) {
         try {
             let song = new Song({
                 songId: req.body.songId,
-                title: req.body.title,
-                thumbnail: req.body.thumbnail,
-                duration: req.body.duration,
+                title: songData.title,
+                thumbnail: songData.snippet.thumbnails.length && songData.snippet.thumbnails[0].url || songData.snippet.thumbnails.url,
+                duration: Number(songData.duration_raw.split(':')[0]*60) + Number(songData.duration_raw.split(':')[1]),
             });
         
             await song.save();
