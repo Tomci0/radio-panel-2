@@ -4,7 +4,7 @@ import fetch from "node-fetch";
 export default async function (req, res, next) {
   const queue = await get_queue();
 
-  if (queue) {
+  if (!queue.error) {
     res.json({
       message: "success - getQueue",
       queue: queue,
@@ -34,13 +34,21 @@ export default async function (req, res, next) {
 }
 
 const get_queue = async function () {
-  const response = await fetch(`${process.env.PlayerURL}/queue/list`, {
-    method: "GET",
-  });
+  try {
+    const response = await fetch(`${process.env.PlayerURL}/queue/list`, {
+      method: "GET",
+      timeout: 1000,
+    });
 
-  if (response.status != 200) {
-    return false;
-  } else {
-    return response.json().data;
+    if (response.status != 200) {
+      return false;
+    } else {
+      return response.json().data;
+    }
+  } catch (error) {
+    console.error(error);
+    return {
+      error: error,
+    };
   }
 };
