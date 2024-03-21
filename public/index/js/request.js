@@ -115,7 +115,7 @@ $(() => {
         $.ajax({
             url: '/request/send',
             method: 'POST',
-            data: { 
+            data: {
                 songId
             },
             withCredentials: true,

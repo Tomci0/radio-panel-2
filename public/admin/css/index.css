@@ -1,0 +1,32 @@
+
+
+#music-sterring .controls .btn {
+    margin-left: 0.5rem;
+    border: 0 !important;
+    background-color: var(--bg-theme);
+    padding: .5rem .6rem;
+}
+
+#music-sterring .controls .btn .iconify {
+    font-size: 1.5rem;
+    color: #fff !important;
+}
+
+#music-sterring .controls .btn:hover {
+    background-color: var(--sterring-btn-hover);
+    cursor: pointer;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+    background: var(--bg-theme);
+    height: 0.5rem;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    background: var(--bg-theme);
+    border: 2px solid #232323;
+}
+
+input[type="range"]:focus {
+    outline: none;
+  }

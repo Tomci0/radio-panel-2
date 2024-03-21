@@ -1,8 +1,9 @@
 import express from "express";
 const router = express.Router();
 
-router.get('/', function(req, res, next) {
-    console.log(req.user)
+import { isAdmin } from "../../middleware/check.js";
+
+router.get('/*', isAdmin, function(req, res, next) {
     res.render('admin/index');
 });
 

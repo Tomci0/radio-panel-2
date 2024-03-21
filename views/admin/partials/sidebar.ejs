@@ -1,0 +1,92 @@
+<div class="accodin-sidebar no-sidebar d-flex justify-content-end">
+    <button class="btn btn-circle" href="#">
+        <span class="iconify" data-icon="mdi:menu" data-inline="false"></span>
+    </button>
+</div>
+<!-- SIDEBAR -->
+<div id="sidebar" class="d-flex flex-column flex-shrink-0 p-3">
+    <a href="/" id="header"
+        class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-decoration-none">
+        <div id="image">
+            <img src="/images/logo.webp" alt="ZS14" width="40" height="40">
+        </div>
+        <span class="name fs-4">Panel Zarządzania</span>
+    </a>
+    <!-- circle accordin button -->
+
+    <div class="accodin-sidebar d-flex justify-content-end">
+        <button class="btn btn-circle">
+            <span class="iconify" data-icon="mdi:menu" data-inline="false"></span>
+        </button>
+    </div>
+    <hr>
+    <ul class="nav nav-pills flex-column mb-auto gap-2">
+        <li class="nav-item">
+            <a data-redirect="/" class="nav-link" aria-current="page">
+                <span class="icon">
+                    <span class="iconify iconify-inline" data-icon="mdi:home-outline"></span>
+                </span>
+                <span class='name ms-2'>Strona Główna</span>
+            </a>
+        </li>
+
+        <li class="sidebar-heading">Radiowęzeł</li>
+
+        <li class="nav-item">
+            <a data-redirect="/verification" class="nav-link" aria-current="page">
+                <span class="icon">
+                    <span class="iconify" data-icon="mdi:shield-check"></span>
+                </span>
+                <span class='name ms-2'>Do Weryfikacji</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a data-redirect="/queue" class="nav-link" aria-current="page">
+                <span class="icon">
+                    <span class="iconify" data-icon="mdi:book-music"></span>
+                </span>
+                <span class='name ms-2'>Kolejka</span>
+            </a>
+        </li>
+        
+        <li class="sidebar-heading">Administracyjne</li>
+
+        <li class="nav-item">
+            <a data-redirect="/users" class="nav-link" aria-current="page">
+                <span class="icon">
+                    <span class="iconify" data-icon="mdi:account"></span>
+                </span>
+                <span class='name ms-2'>Uzytkownicy</span>
+            </a>
+        </li>
+    </ul>
+
+
+    <div id="change-size-sidebar" class=" d-flex justify-content-end mb-4">
+        <button class="btn btn-circle" href="#">
+            <span class="iconify" data-icon="mdi:arrow-right-bold" data-inline="false"></span>
+        </button>
+    </div>
+
+    <div id="change-theme">
+        <button id="theme-toggle" class="btn w-100">
+            <span id="theme-icon" class="iconify" data-icon="mdi:theme-light-dark" data-inline="false"></span>
+        </button>
+    </div>
+
+    <hr>
+    <div class="dropdown">
+        <a href="#" class="d-flex align-items-center text-decoration-none dropdown-toggle"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="<%= userdata.picture %>>" alt="" width="32" height="32" class="rounded-circle me-2">
+            <span id="username"><%= userdata.given_name %></span>
+        </a>
+        <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
+            <li><a class="dropdown-item">Ustawienia</a></li>
+            <li>
+                <hr class="dropdown-divider">
+            </li>
+            <li><a class="dropdown-item">Wyloguj Się</a></li>
+        </ul>
+    </div>
+</div>

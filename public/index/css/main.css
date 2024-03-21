@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
 * {
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     user-select: none;
 }
 
@@ -16,14 +16,13 @@ body {
 }
 
 .page-link:focus,
-.page-link:active{
-    box-shadow:none !important;
-    outline:0px !important;
+.page-link:active {
+    box-shadow: none !important;
+    outline: 0px !important;
 }
 
 .list-group-item {
     transition: 0.2s;
-
 }
 
 /* NAVBAR */
@@ -31,7 +30,7 @@ body {
 header {
     background-color: #ebebeb;
     padding: 4vw;
-    border-radius: 0 0 1.0vw 1.0vw;
+    border-radius: 0 0 1vw 1vw;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
 
@@ -222,6 +221,11 @@ footer {
     background-color: #00000000;
 }
 
+#page-content #queue-list .list-group-item .song-info .name a {
+    text-decoration: none;
+    color: #191919de;
+}
+
 @media screen and (max-width: 576px) {
     #page-content .list-group {
         max-height: 43.6rem;
@@ -244,7 +248,7 @@ footer {
 
 #find-music-btn {
     background-color: #191919;
-    color: rgba(255, 255, 255, 0.87);;
+    color: rgba(255, 255, 255, 0.87);
     transition: 0.2s;
 }
 
@@ -263,7 +267,6 @@ footer {
     transform: translateY(-50%);
 
 } */
-
 
 #page-content #request-results-list .list-group-item .thumbnail img {
     border: 0;
@@ -313,7 +316,6 @@ footer {
     background-color: #019232;
 }
 
-
 /* #page-content #queue-list .list-group-item .song-info {
     height: 5.5vh;
 } */
@@ -325,7 +327,6 @@ footer {
 .fs-09 {
     font-size: 0.9em !important;
 }
-
 
 /* ADD-ONS BOOTSTRAP */
 

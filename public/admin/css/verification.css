@@ -1,0 +1,89 @@
+#page-content #song-verification {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    list-style: none;
+    flex-direction: column;
+}
+
+#page-content #song-verification .item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: var(--second-bg-color);
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 5px;
+    box-shadow: var(--shadow);
+
+    margin-top: 0.5rem;
+}
+
+#page-content #song-verification .item .item-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#page-content #song-verification .item .buttons {
+    display: flex;
+}
+
+#page-content #song-verification .item .buttons .btn {
+    margin-right: 0.4rem;
+}
+
+#page-content #song-verification .item .move {
+    background-color: var(--second-bg-color);
+    box-shadow: var(--shadow);
+    font-size: 1.4rem;
+    height: auto;
+
+    padding: 0.3rem 0.6rem;
+    border-radius: 5px;
+    transition: 0.2s;
+}
+
+#page-content #song-verification .item .move:hover {
+    background-color: var(--btn-hover-color);
+    cursor: pointer;
+}
+
+#page-content #song-verification .item .item-content .image img {
+    border-radius: 5px;
+    width: 50px;
+    height: 50px;
+}
+
+#page-content #song-verification .item .item-content .text {
+    text-align: center;
+    flex-direction: column;
+}
+
+#page-content #song-verification .item .item-content .text .title {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    text-decoration: none;
+    color: var(--font-color);
+    transition: 0.2s;
+}
+
+#page-content #song-verification .item .item-content .text .title:hover {
+    color: var(--bg-theme);
+}
+
+#page-content #song-verification .item .item-content .text .author {
+    font-size: 0.6rem;
+    font-weight: 300;
+    margin-top: auto;
+}
+
+#page-content #song-verification .item .item-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.6rem;
+    font-weight: 300;
+}

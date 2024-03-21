@@ -1,0 +1,45 @@
+/* DARK */
+
+html[data-bs-theme="dark"] * {
+    --bg-color: #191919;
+    --font-color: rgba(255, 255, 255, 0.87);
+
+    --divdiver-color: rgba(255, 255, 255, 0.27);
+
+    --second-bg-color: #232323;
+
+    --bg-theme: #019232;
+
+    --sidebar-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.5);
+    --shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+
+    --card-header-bg: rgba(25, 25, 25, 0.3);
+    --card-header-border: 1px solid rgba(0, 0, 0, 0.1);
+    --card-btn-color: #0192311a;
+
+    --sterring-btn-hover: rgba(1, 146, 49, 0.7);
+
+    --btn-hover-color: #2c2c2c;
+}
+
+html[data-bs-theme="light"] * {
+    --bg-color: #ffffff;
+    --font-color: rgba(0, 0, 0, 0.87);
+
+    --divdiver-color: rgba(0, 0, 0, 0.1);
+
+    --second-bg-color: #f0f0f0;
+
+    --bg-theme: #019232;
+
+    --sidebar-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.1);
+    --shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+
+    --card-header-bg: rgba(255, 255, 255, 0.3);
+    --card-header-border: 1px solid rgba(0, 0, 0, 0.1);
+    --card-btn-color: #019232;
+
+    --sterring-btn-hover: rgba(1, 146, 49, 0.7);
+
+    --btn-hover-color: rgba(25, 25, 25, 0.1);
+}
